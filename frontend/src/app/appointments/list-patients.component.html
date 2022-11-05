@@ -1,0 +1,58 @@
+<div class="jumbotron jumbotron-primary">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search By Name"
+        style="width:400px" [(ngModel)]="searchItem" />
+    </div>
+    <div class="panel panel-primary" *ngFor="let patient of sortedPatients | keyvalue">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{patient.value.fullName}} ID:{{patient.value.patID}}</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-xs-10">
+                <div class="row vertical-align">
+                    <div class="col-xs-6">
+                        <img class="imgClass" [src]="patient.value.photoPath" />
+                    </div>
+                     <div class="col-xs-8">
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                Address
+                            </div>
+                            <div class="col-xs-6">
+                                :{{patient.value.address}}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="col-xs-6">
+                                    Sex
+                                </div>
+                                <div class="col-xs-6">
+                                    :{{patient.value.sex}}
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                    <div class="col-xs-6">
+                                        Reason for booking
+                                    </div>
+                                    <div class="col-xs-6">
+                                        :{{patient.value.reason}}
+                                    </div>
+                                </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <button class="btn btn-primary" >View Patient</button>
+            <button class="btn btn-primary" (click)="editPatient(patient.value.patID)">Edit Patient</button>
+            <button class="btn btn-danger" >Delete Patient</button>
+        </div>
+    </div>
+
+    <!-- div *ngFor="let item of testObject | keyvalue">
+    Key: <b>{{item.key}}</b> and Value: <b>{{item.value}}</b>
+</div> -->

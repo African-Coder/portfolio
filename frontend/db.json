@@ -1,0 +1,180 @@
+{
+  "patients": [
+    {
+      "patID": 1,
+      "fullName": "Andrew Van Der Merve",
+      "address": "458 Block L",
+      "sex": "Male",
+      "reason": "Covid-19 Test",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 2,
+      "fullName": "Ronny Sithole",
+      "address": "5567 Block K",
+      "sex": "Male",
+      "reason": "Covid-19 Test",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 3,
+      "fullName": "Mmamokgethi Phakeng",
+      "address": "109 Block L",
+      "sex": "Female",
+      "reason": "Baby CheckUp",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 4,
+      "fullName": "Donna Claire",
+      "address": "7623 Block K",
+      "sex": "Female",
+      "reason": "Elderly Patient",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 5,
+      "fullName": "Gianni Versace",
+      "address": "451 Block XX Soshanguve",
+      "sex": "Female",
+      "reason": "Elderly Patient",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 6,
+      "fullName": "Willam Shakespear",
+      "address": "4990 Block W Soshanguve",
+      "sex": "Male",
+      "reason": "Elderly Patient",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 7,
+      "fullName": "Allan Harper",
+      "address": "493 Block P Soshanguve",
+      "sex": "Male",
+      "reason": "Monkey Pox Test",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 8,
+      "fullName": "Kwanele Sithelo",
+      "address": "990 Block TT Soshanguve",
+      "sex": "Male",
+      "reason": "Blood Test",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 9,
+      "fullName": "Shoki Zwide",
+      "address": "56 Soshanguve Block X",
+      "sex": "Female",
+      "reason": "Baby CheckUp",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 10,
+      "fullName": "Mampho Zwide",
+      "address": "778 Block X Soshanguve",
+      "sex": "Female",
+      "reason": "Baby CheckUp",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 11,
+      "fullName": "Angela Mooki",
+      "address": "177 Block P Soshanguve",
+      "sex": "Female",
+      "reason": "Monthly Appointment",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 12,
+      "fullName": "Thembi Kwezi",
+      "address": "990 Block TT Soshanguve",
+      "sex": "Female",
+      "reason": "Open New File",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 13,
+      "fullName": "SuperMan",
+      "address": "123 Soshanguve Block R",
+      "sex": "Male",
+      "reason": "Covid-19 Test",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 14,
+      "fullName": "Wendy Pan",
+      "address": "123 Block F Soshanguve",
+      "sex": "Female",
+      "reason": "Elderly Patient",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 15,
+      "fullName": "Thabiso Kotane",
+      "address": "987 Block P Soshanguve",
+      "sex": "Male",
+      "reason": "Open New File",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 16,
+      "fullName": "Thabiso Tema",
+      "address": "987 Block S Soshanguve",
+      "sex": "Male",
+      "reason": "Open New File",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 17,
+      "fullName": "Happy Sindane",
+      "address": "1232 Ext 1 Soshanguve",
+      "sex": "Male",
+      "reason": "Collection",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 18,
+      "fullName": "Milo Thatch",
+      "address": "332 Block A Soshanguve",
+      "sex": "Male",
+      "reason": "Covid-19 Test",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 19,
+      "fullName": "Aaron Mashabela",
+      "address": "1956 Block L Soshanguve",
+      "sex": "Male",
+      "reason": "Blood Test",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 20,
+      "fullName": "Billy Shabalala",
+      "address": "5 Block JJ Soshanguve",
+      "sex": "Male",
+      "reason": "Collection",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 21,
+      "fullName": "Wendy Williams",
+      "address": "785 Block L",
+      "sex": "Female",
+      "reason": "Monthly Appointment",
+      "photoPath": "assets/images/icon.png"
+    },
+    {
+      "patID": 22,
+      "fullName": "Mason SS",
+      "address": "5 Block B Soshanguve",
+      "sex": "Male",
+      "reason": "Blood Test",
+      "photoPath": "assets/images/icon.png"
+    }
+  ]
+}

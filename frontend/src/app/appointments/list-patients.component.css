@@ -1,0 +1,12 @@
+.imgClass{
+    width: 200px;
+    height: 200px;
+}
+.vertical-align{
+    display: flex;
+    align-items: center;
+}
+button.btn {
+    width: 120px;
+    margin-right: 60px;
+}
