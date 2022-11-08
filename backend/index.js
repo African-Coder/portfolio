@@ -6,4 +6,4 @@ const port = 3001;
 
 app.get('/', (req, res) => res.send('Welcome to our API'));
 
-app.listen(port, () => console.log(`running express on port ${port} `));
+app.listen(process.env.PORT || 5000);
