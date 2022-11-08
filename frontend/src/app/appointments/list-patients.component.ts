@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ListPatientsComponent implements OnInit {
 
-  patients: any[] = [];
+  patients: Patient[] = [];
 
   sortedPatients : any[];
 
@@ -39,7 +39,7 @@ export class ListPatientsComponent implements OnInit {
   // patientList: any[] = [];
 
 
-  @Input() patient!: Patient;
+  @Input() patient: Patient;
 
   constructor(private _patientService: PatientService,
               private _router: Router,
@@ -59,9 +59,18 @@ export class ListPatientsComponent implements OnInit {
      
   }
 
-  editPatient(index : number) {
-    this._router.navigate(['/edit', index]);
-    console.log('index '+ (index));
+  editPatient(id : number) {
+    this._router.navigate(['/edit', id]);
+  }
+
+  deletePatient(id : number) {
+    //delete patient
+    this._patientService.removePatient(id).subscribe(
+      () => alert(`Patient with ID: ${this.patient.id}  deleted`),
+      (err) => console.log(err)
+    );
+
+    this._router.navigate(['/list']);
   }
 
 }

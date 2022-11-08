@@ -4,34 +4,45 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Create A Booking For Patient</h3>
             </div>
-
+            
             <div class="panel-body">
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="fullName">Full Name:</label>
-                    <div class="col-sm-4">
-                        <input id="fullName" name="fullName" [(ngModel)]=user.fullName #fullNameControl="ngModel" type="text" class="form-control">
+                    <div class="col-sm-5">
+                        <input id="fullName" name="fullName" [(ngModel)]=user.fullName #fullNameControl="ngModel" type="text" class="form-control"
+                        pattern="(?=.*[a-z]).{3,}" required>
+                        <span class="help-block" *ngIf="fullNameControl.invalid && fullNameControl.touched">
+                            <h6 style="color:red">full name must contain minimum of 3 characters</h6>
+                          </span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="address">Home Address:</label>
-                    <div class="col-sm-4">
-                        <input id="address" name="address" [(ngModel)]=user.address #addressControl="ngModel" type="text" class="form-control">
+                    <div class="col-sm-5">
+                        <input id="address" name="address" [(ngModel)]=user.address #addressControl="ngModel" type="text" class="form-control"
+                        pattern="(?=.*[a-z]).{10,}" required>
+                        <span class="help-block" *ngIf="addressControl.invalid && addressControl.touched">
+                            <h6 style="color:red">address must contain minimum of 10 characters</h6>
+                          </span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="sex">Sex:</label>
-                    <div class="col-sm-4">
-                        <select id="sex" name="sex" [(ngModel)]=user.sex #sexControl="ngModel" class="form-control">
+                    <div class="col-sm-5">
+                        <select id="sex" name="sex" [(ngModel)]=user.sex #sexControl="ngModel" class="form-control" required>
                                 <option value="Female">Female</option>
                                 <option value="Male">Male</option>
                         </select>
+                        <span class="help-block" *ngIf="sexControl.invalid && sexControl.touched">
+                            <h6 style="color:red">sex must be selected for medical reasons</h6>
+                          </span>
                     </div>
                 </div>
 
                 <div class="form-group">
                         <label class="col-sm-2 control-label" for="reason">Reason For Booking </label>
-                        <div class="col-sm-4">
-                    <select id="reason" name="reason" [(ngModel)]=user.reason #reasonControl="ngModel" class="form-control">
+                        <div class="col-sm-5">
+                    <select id="reason" name="reason" [(ngModel)]=user.reason #reasonControl="ngModel" class="form-control" required>
                         <option value="Monthly Appointment">Monthly Appointment</option>
                             <option value="Collection">Collection</option>
                             <option value="Blood Test">Blood Test</option>
@@ -41,11 +52,14 @@
                             <option value="Open New File">Open New File</option>
                             <option value="Elderly Patient">Elderly Patient</option>
                       </select>
+                      <span class="help-block" *ngIf="reasonControl.invalid && reasonControl.touched">
+                        <h6 style="color:red">must select a reason for medical reasons</h6>
+                      </span>
                     </div>
                 </div>
 
                 <div class="panel-footer">
-                    <button type="submit" class="btn btn-primary">Book Appointment</button>
+                    <button type="submit" [disabled]="bookingForm.invalid" class="btn btn-primary">Book Appointment</button>
                     <h6 class="text-center"><a href="/"><i class="fa fa-home"></i> Home</a> | <a href="">Privacy Policy</a>
                     </h6>
                     <h6 class="text-center">© Copyright &nbsp;</h6>

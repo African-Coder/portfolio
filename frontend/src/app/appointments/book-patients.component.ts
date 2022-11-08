@@ -16,13 +16,18 @@ export class BookPatientsComponent implements OnInit {
 
   @ViewChild('bookingForm') public bookingForm!: NgForm;
 
-  user : any = {
-  };
+  user: any = {
+    id: null,
+    fullName: null,
+    address: null,
+    sex: null,
+    reason: null
+  }
 
   constructor(private _addPatientService: PatientService,
     private _route: ActivatedRoute,
     private _router: Router,
-    private _http : HttpClient) { }
+    private _http: HttpClient) { }
 
   ngOnInit(): void {
 
@@ -34,7 +39,7 @@ export class BookPatientsComponent implements OnInit {
   }
 
   private getPatient(id: any) { //accepts index from edit() to refill/reuse form
-   
+
     if (id == 0) {
       this.user = {
         id: null,
@@ -46,7 +51,7 @@ export class BookPatientsComponent implements OnInit {
     }
     else {
       this.user = this._addPatientService.getPatient(id).subscribe(
-        (data: any) => {
+        (data: Patient) => {
           this.user = {
             id: data[0].patID,
             fullName: data[0].fullName,
@@ -56,7 +61,7 @@ export class BookPatientsComponent implements OnInit {
           }
         }
       );
-    
+
     }
   }
 
@@ -64,7 +69,7 @@ export class BookPatientsComponent implements OnInit {
     if (this.user.id == null) {
       this.user.id = 0;
       this._addPatientService.savePatient(this.user).subscribe(
-        (data: any) => {
+        (data: Patient) => {
           console.log('saved data: ' + data);
           this.bookingForm.reset();
           this._router.navigate(['list']);
@@ -72,27 +77,18 @@ export class BookPatientsComponent implements OnInit {
         },
         (error: any) => console.log(error)
       );
-
-
     }
     else {
       console.log(this.user);
-      console.log('inside');
       this._addPatientService.updatePatient(this.user).subscribe(
-        (data : any) => {
-          console.log('inside2');
-          this.user = {
-            id : data[0].patID,
-            fullName: data[0].fullName,
-            address: data[0].address,
-            sex: data[0].sex,
-            reason: data[0].reason
-          }
-          console.log('inside');
-          this.bookingForm.resetForm();
+        () => {
+
+          this.bookingForm.reset();
           this._router.navigate(['list']);
-        }
+        },
+        (error: any) => console.log(error)
       )
+
     }
   }
 
