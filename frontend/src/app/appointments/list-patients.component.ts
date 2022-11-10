@@ -34,12 +34,12 @@ export class ListPatientsComponent implements OnInit {
   // fullName: string = '';
   // address: string = '';
   // sex: string = '';
-  photoPath: string = 'frontend/dist/firstApp/assets/images/icon.png';
+  //photoPath: string = 'frontend/dist/firstApp/assets/images/icon.png';
 
   // patientList: any[] = [];
 
 
-  @Input() patient: Patient 
+  patient: Patient;
 
   constructor(private _patientService: PatientService,
               private _router: Router,
