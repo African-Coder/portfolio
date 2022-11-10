@@ -12,8 +12,8 @@ export class PatientService {
 
     constructor(private _httpClient: HttpClient) { }
 
-    private _url = 'http://localhost:3001/patients'; //url of database s
-    private _baseUrl = 'http://localhost:3001/patients';
+    private _url = 'https://patientqueue.herokuapp.com/patients'; //url of database s
+    private _baseUrl = 'https://patientqueue.herokuapp.com/patients';
 
     private handleError(errorResponse: HttpErrorResponse) {
         if (errorResponse.error instanceof ErrorEvent) {
