@@ -34,7 +34,7 @@ export class ListPatientsComponent implements OnInit {
   // fullName: string = '';
   // address: string = '';
   // sex: string = '';
-  // // photoPath: string = '';
+  photoPath: string = 'dist/firstApp/assets/images/icon.png';
 
   // patientList: any[] = [];
 
